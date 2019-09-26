@@ -7,7 +7,7 @@ common security vulnerabilities, such as XSS and SQLi.
 """
 
 import sqlite3
-from flask import Flask, current_app, request
+from flask import Flask, current_app, escape, request
 
 app = Flask(__name__)
 
