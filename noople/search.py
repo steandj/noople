@@ -79,7 +79,7 @@ def get_search_results_html(search_query=None):
         insert_query(search_query)
 
         # Format results as HTML
-        search_results = '<p>You searched for: ' + search_query + '</p>'
+        search_results = '<p>You searched for: ' + str(escape(search_query)) + '</p>'
         search_results += '<p>No results found.</p>'
         return search_results
 
