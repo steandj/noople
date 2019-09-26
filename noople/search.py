@@ -97,8 +97,8 @@ def get_recent_searches_html():
     if recent_queries:
         recent_searches = '<p>Recent searches:</p><ul>'
         for query in recent_queries:
-            recent_searches += '<li><a href="/?q=' + query[0] + '">'
-            recent_searches += query[0]
+            recent_searches += '<li><a href="/?q=' + str(escape(query[0])) + '">'
+            recent_searches += str(escape(query[0]))
             recent_searches += '</a></li>'
         recent_searches += '</ul>'
         return recent_searches
